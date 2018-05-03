@@ -1,0 +1,10 @@
+<resources>
+    <!-- APP NAME -->
+    <string name="app_name">You Got News!</string>
+
+    <!-- Error -->
+    <string name="errorNoInternet">No Internet detected, please check your device.</string>
+    <string name="errorNoNews">Server down, please try again later.</string>
+    <string name="errorAPP">APP to open website not found.\nPlease download one from the Play Store.</string>
+
+</resources>

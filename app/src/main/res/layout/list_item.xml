@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/BaseMatchAndWrapStyle"
+    android:background="@drawable/list_item_bg"
+    android:orientation="vertical"
+    android:padding="@dimen/defaultMarginPadding">
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/BaseWrapStyle"
+        android:lines="1"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        tools:text="@tools:sample/lorem/random" />
+
+    <TextView
+        android:id="@+id/summary"
+        style="@style/BaseWrapStyle"
+        android:lines="1"
+        android:paddingBottom="@dimen/defaultMarginPadding"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+        tools:text="@tools:sample/lorem/random" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"
+        android:layout_marginBottom="@dimen/defaultMarginPadding"
+        android:background="@color/divider" />
+
+    <ImageView
+        android:id="@+id/thumbnail"
+        style="@style/BaseMatchAndWrapStyle"
+        android:scaleType="fitXY"
+        tools:background="@drawable/ic_launcher_background"
+        tools:ignore="ContentDescription" />
+
+    <RelativeLayout
+        style="@style/BaseMatchAndWrapStyle">
+
+        <TextView
+            android:id="@+id/author"
+            style="@style/BaseWrapStyle"
+            android:lines="1"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            android:textStyle="italic|bold"
+            tools:text="By Media Paul" />
+
+        <TextView
+            android:id="@+id/date"
+            style="@style/BaseWrapStyle"
+            android:lines="1"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            android:textStyle="bold"
+            tools:text="@tools:sample/date/ddmmyy" />
+
+    </RelativeLayout>
+
+</LinearLayout>

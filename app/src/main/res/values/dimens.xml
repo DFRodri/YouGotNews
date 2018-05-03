@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Generic Use -->
+    <dimen name="defaultMarginPadding">16dp</dimen>
+
+    <!-- Divider -->
+    <dimen name="dividerHeight">2dp</dimen>
+
+</resources>
