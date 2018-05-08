@@ -7,25 +7,21 @@
     android:padding="@dimen/defaultMarginPadding">
 
     <TextView
-        android:id="@+id/title"
-        style="@style/BaseWrapStyle"
+        android:id="@+id/date"
+        style="@style/BaseMatchStyle"
         android:lines="1"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-        tools:text="@tools:sample/lorem/random" />
+        android:gravity="start"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+        android:textStyle="bold"
+        tools:text="@tools:sample/date/ddmmyy" />
 
     <TextView
-        android:id="@+id/summary"
+        android:id="@+id/title"
         style="@style/BaseWrapStyle"
-        android:lines="1"
-        android:paddingBottom="@dimen/defaultMarginPadding"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
         tools:text="@tools:sample/lorem/random" />
-
-    <View
-        android:layout_width="wrap_content"
-        android:layout_height="2dp"
-        android:layout_marginBottom="@dimen/defaultMarginPadding"
-        android:background="@color/divider" />
 
     <ImageView
         android:id="@+id/thumbnail"
@@ -34,27 +30,27 @@
         tools:background="@drawable/ic_launcher_background"
         tools:ignore="ContentDescription" />
 
-    <RelativeLayout
-        style="@style/BaseMatchAndWrapStyle">
+    <!--<View
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"
+        android:layout_marginBottom="@dimen/defaultMarginPadding"
+        android:background="@color/divider" />-->
 
-        <TextView
-            android:id="@+id/author"
-            style="@style/BaseWrapStyle"
-            android:lines="1"
-            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
-            android:textStyle="italic|bold"
-            tools:text="By Media Paul" />
+    <TextView
+        android:id="@+id/summary"
+        style="@style/BaseWrapStyle"
+        android:lines="2"
+        android:paddingBottom="@dimen/defaultMarginPadding"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+        tools:text="@tools:sample/lorem/random" />
 
-        <TextView
-            android:id="@+id/date"
-            style="@style/BaseWrapStyle"
-            android:lines="1"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
-            android:textStyle="bold"
-            tools:text="@tools:sample/date/ddmmyy" />
-
-    </RelativeLayout>
+    <TextView
+        android:id="@+id/author"
+        style="@style/BaseMatchStyle"
+        android:gravity="end"
+        android:lines="1"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+        android:textStyle="italic|bold"
+        tools:text="By Media Paul" />
 
 </LinearLayout>

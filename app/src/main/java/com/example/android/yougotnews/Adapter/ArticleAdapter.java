@@ -19,10 +19,18 @@ import com.example.android.yougotnews.R;
 
 import java.io.InputStream;
 import java.net.URL;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
+import java.util.Locale;
+import java.util.TimeZone;
 
+//Class of the adapter to be used in our MainActivity
+//Makes use of ViewHolder to make things load faster
 public class ArticleAdapter extends ArrayAdapter<Article> {
 
+    //global variable
     private static final String TAG = "Error: ";
 
     static class ViewHolder {
@@ -38,7 +46,6 @@ public class ArticleAdapter extends ArrayAdapter<Article> {
      *
      * @param context     - context of the app
      * @param articleList - list of articles
-     *
      */
     public ArticleAdapter(Context context, List<Article> articleList) {
         super(context, 0, articleList);
@@ -70,58 +77,98 @@ public class ArticleAdapter extends ArrayAdapter<Article> {
             holder = (ViewHolder) convertView.getTag();
         }
 
+        //each element (Item) of our list has data stored in different positions
+        //this makes sure that we're accessing the right one
         Article article = getItem(position);
 
+        //fetches the title info from the article Object stored
         String title = article.getTitle();
+
+        //Because some authors like to add their names to the title, we have to take care of these exceptions
+        //They seem rare (until now I only notice it from one single person - Ante Jukic) but cleaner headers at 100% are always better
+        //There's a dedicated section for them after all
+        if (title.contains("|")) {
+            String[] fixedTitle = title.split("\\|");
+            title = fixedTitle[0];
+        }
+
+        //fetches the summary info from the article Object stored
         String summary = article.getSummary();
+        //because the summary sometimes comes with exclusive html tags such as <i></i>
+        //we need to format it to proper usable data by our app and system
         CharSequence convertedSummary = Html.fromHtml(summary);
-        if (convertedSummary.length() > 50) {
-            String currentSummary = (String) convertedSummary.subSequence(0, 50);
+        //Since screen space is limited with an image, sometimes a summary can be more than what
+        //we've free to use so we limit it a bit more and add a sign that there is more after that
+        if (convertedSummary.length() > 100) {
+            String currentSummary = convertedSummary.subSequence(0, 100).toString();
+
             convertedSummary = currentSummary.subSequence(0, currentSummary.lastIndexOf(" ") + 1);
             convertedSummary = convertedSummary + "...";
         }
-        String author = article.getAuthor();
-        if (author.length() == 0){
+        //fetches the author info from the article Object stored
+        String author = getContext().getString(R.string.byAuthorPrefix) + " " + article.getAuthor();
+        //in case there is nothing there, we get a generic text
+        if (author.length() == 0) {
             author = "<i>The Guardian</i>";
         }
-
+        //fetches the date info from the article Object stored
         String date = article.getDate();
+        //and formats it as we want, even taking consideration of the time zone of the user
         String currentTime = formatDate(date);
 
+        //variables needed to display our images
+        final String imageUrl = article.getImage();
+        final ViewHolder finalHolder = holder;
 
-        String imageUrl = article.getImage();
-        Bitmap fetchedImage = imageDecoded(imageUrl);
+        //To prevent networkOnMainThreadExceptions, we need to call our images in another thread
+        //For that, since we can't use AsyncTask in this project, just loaders, we make use of a Runnable
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    final Bitmap articleImage = BitmapFactory.decodeStream((InputStream) new URL(imageUrl).getContent());
+                    finalHolder.thumbnail.post(new Runnable() {
+                        @Override
+                        public void run() {
+                            if (articleImage != null) {
+                                finalHolder.thumbnail.setImageBitmap(articleImage);
+                            }
+                        }
+                    });
+                } catch (Exception e) {
+                    Log.e(TAG, "Houston, we got an exception " + e);
+                }
+            }
+        }).start();
 
+        //sets the previous info fetched (note: we already took care of the image)
         holder.title.setText(title);
         holder.summary.setText(convertedSummary);
-        holder.thumbnail.setImageBitmap(fetchedImage);
         holder.author.setText(author);
         holder.date.setText(currentTime);
 
+        //returns the convertView data to the caller
         return convertView;
     }
 
+
+    //Formats the date of the article to the appropriate time of the user
     private String formatDate(String date) {
-        String[] time = date.split("T");
-        String[] timeUnit = time[0].split("-");
-        String year = timeUnit[0];
-        String month = timeUnit[1];
-        String day = timeUnit[2];
-        date = day + "-" + month + "-" + year;
-
-        return date;
-    }
-
-    //method to fetch our image based on the url string in the List
-    private Bitmap imageDecoded(String imageUrl) {
-        Bitmap decodedImage = null;
+        SimpleDateFormat responseDate = new SimpleDateFormat("yyyy-MM-dd'T'hh:mm:ss'Z'", Locale.getDefault());
+        responseDate.setTimeZone(TimeZone.getTimeZone("UTC"));
         try {
-            InputStream inputStream = new URL(imageUrl).openStream();
-            decodedImage = BitmapFactory.decodeStream(inputStream);
-        } catch (Exception e) {
-            Log.e(TAG, e.getMessage());
-            e.printStackTrace();
+            Date newDate = responseDate.parse(date);
+            long fixedArticleDate = newDate.getTime();
+
+            Date newArticleDate = new Date(fixedArticleDate);
+
+            SimpleDateFormat fixedArticleDateFormatter = new SimpleDateFormat("dd-LL-YYYY, kk:mm:ss", Locale.getDefault());
+            String articleDate = fixedArticleDateFormatter.format(newArticleDate);
+
+            return articleDate;
+        } catch (ParseException e) {
+            Log.e(TAG, "Parse exception" + e);
+            return null;
         }
-        return decodedImage;
     }
 }

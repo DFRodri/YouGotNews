@@ -1,5 +1,15 @@
 package com.example.android.yougotnews.Class;
 
+/**
+ * Custom Class to create the custom Object Credits that holds seven elements
+ * @Params title - tile of the article
+ * @Params summary - summary of the article*
+ * @Params section - section of the article from where we want news
+ * @Params date - when the article was published
+ * @Params author - who wrote the article
+ * @Params url - the url of the article
+ * @Params image - url of the header image used in the article
+ **/
 public class Article {
 
     private String title;
@@ -10,6 +20,7 @@ public class Article {
     private String url;
     private String image;
 
+    //constructor needed to create the custom Object
     public Article(String title, String summary, String section, String date, String author, String url, String image) {
         this.title = title;
         this.summary = summary;
@@ -20,6 +31,7 @@ public class Article {
         this.image = image;
     }
 
+    //get methods to retrieve their values
     public String getSummary() {
         return summary;
     }
@@ -42,9 +54,5 @@ public class Article {
 
     public String getImage() {
         return image;
-    }
-
-    public String getSection() {
-        return section;
     }
 }

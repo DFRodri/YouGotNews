@@ -1,10 +1,32 @@
 <resources>
     <!-- APP NAME -->
-    <string name="app_name">You Got News!</string>
+    <string name="app_name">You Got News! - Football</string>
 
     <!-- Error -->
     <string name="errorNoInternet">No Internet detected, please check your device.</string>
     <string name="errorNoNews">Server down, please try again later.</string>
     <string name="errorAPP">APP to open website not found.\nPlease download one from the Play Store.</string>
+
+    <!-- News -->
+    <string name="byAuthorPrefix">by</string>
+    <string name="noInternetLastNewsDisplayed">No network available.\nDisplaying last news.</string>
+
+    <!-- Action Bar -->
+    <string name="refresh">Refresh</string>
+    <string name="credits">You Got Credits!</string>
+
+    <!-- Credits -->
+    <string name="creditName0">the guardian/open platform - documentation/Overview</string>
+    <string name="creditURL0">https://open-platform.theguardian.com/documentation/</string>
+    <string name="creditName1">Stack Overflow - Action Bar: Refresh Button</string>
+    <string name="creditURL1">https://stackoverflow.com/questions/27822002/actionbar-refresh-button</string>
+    <string name="creditName2">Stack Overflow - Android: Load Image from URL to Bitmap</string>
+    <string name="creditURL2">https://stackoverflow.com/questions/8992964/android-load-from-url-to-bitmap</string>
+    <string name="creditName3">Stack Overflow - Format Date and Time in Android</string>
+    <string name="creditURL3">https://stackoverflow.com/questions/454315/how-do-you-format-date-and-time-in-android</string>
+    <string name="creditName4">Stack Overflow - SimpleDateFormat: Parsing date with \'Z\' literal</string>
+    <string name="creditURL4">https://stackoverflow.com/questions/2580925/simpledateformat-parsing-date-with-z-literal</string>
+    <string name="creditName5">Developer Android: Implementing Navigation</string>
+    <string name="creditURL5">https://developer.android.com/training/implementing-navigation/ancestral</string>
 
 </resources>

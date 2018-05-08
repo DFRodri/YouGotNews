@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/BaseMatchStyle"
+    android:background="@drawable/list_item_bg"
+    android:orientation="vertical"
+    android:padding="@dimen/defaultMarginPadding">
+
+    <!-- List of News -->
+    <ListView
+        android:id="@+id/creditsList"
+        style="@style/BaseMatchStyle" />
+
+</LinearLayout>
