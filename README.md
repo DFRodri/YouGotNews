@@ -20,7 +20,7 @@
 
 ## Here is a video showing it working (Recorded with Android Studio so no audio)
 
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=Cvaz6AyArCA" target="_blank"><img src="http://img.youtube.com/vi/Cvaz6AyArCA/0.jpg" alt="You Got News! - Stage 1" width="240" height="180" border="10" /></a>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=Cvaz6AyArCA" target="_blank"><img src="http://img.youtube.com/vi/Cvaz6AyArCA/0.jpg" alt="YouGotNewsStage1" width="240" height="180" border="10" /></a>
 
    Copyright 2018 Diogo Rodrigues
 
