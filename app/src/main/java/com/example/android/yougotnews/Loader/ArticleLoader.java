@@ -11,7 +11,7 @@ import java.util.List;
 public class ArticleLoader extends AsyncTaskLoader<List<Article>> {
 
     //global variable
-    private String queryUrl;
+    private final String queryUrl;
 
     //constructor of our article Loader class
     public ArticleLoader(Context context, String queryUrl) {

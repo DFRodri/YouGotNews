@@ -13,9 +13,8 @@ import java.util.ArrayList;
 
 public class CreditsActivity extends AppCompatActivity {
 
-    //global variables
-    private ListView listView;
-    private ArrayList<Credits> creditsArrayList = new ArrayList<>();
+    //global variable
+    private final ArrayList<Credits> creditsArrayList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +25,7 @@ public class CreditsActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         //call and setup of the arrayList with the credits
-        listView = findViewById(R.id.creditsList);
+        ListView listView = findViewById(R.id.creditsList);
 
         //call to the method that populates our array list
         setupCredits();
@@ -44,13 +43,13 @@ public class CreditsActivity extends AppCompatActivity {
         creditsArrayList.add(new Credits(getString(R.string.creditName3), getString(R.string.creditURL3)));
         creditsArrayList.add(new Credits(getString(R.string.creditName4), getString(R.string.creditURL4)));
         creditsArrayList.add(new Credits(getString(R.string.creditName5), getString(R.string.creditURL5)));
+        creditsArrayList.add(new Credits(getString(R.string.creditName6), getString(R.string.creditURL6)));
     }
 
     //Override to make our navigation up button work
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            // action with ID action_refresh was selected
             case R.id.home:
                 NavUtils.navigateUpFromSameTask(this);
                 return true;

@@ -43,7 +43,7 @@ public class CreditsAdapter extends ArrayAdapter<Credits> {
     @NonNull
     @Override
     public View getView(final int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        ViewHolder holder = null;
+        ViewHolder holder;
         //Checks if we already have or not a list view (convertView) to reuse
         //If we have none, create a new one
         if (convertView == null) {

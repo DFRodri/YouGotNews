@@ -1,6 +1,6 @@
 <resources>
     <!-- APP NAME -->
-    <string name="app_name">You Got News! - Football</string>
+    <string name="app_name">You Got News!</string>
 
     <!-- Error -->
     <string name="errorNoInternet">No Internet detected, please check your device.</string>
@@ -14,6 +14,7 @@
     <!-- Action Bar -->
     <string name="refresh">Refresh</string>
     <string name="credits">You Got Credits!</string>
+    <string name="settings">Settings</string>
 
     <!-- Credits -->
     <string name="creditName0">the guardian/open platform - documentation/Overview</string>
@@ -28,5 +29,54 @@
     <string name="creditURL4">https://stackoverflow.com/questions/2580925/simpledateformat-parsing-date-with-z-literal</string>
     <string name="creditName5">Developer Android: Implementing Navigation</string>
     <string name="creditURL5">https://developer.android.com/training/implementing-navigation/ancestral</string>
+    <string name="creditName6">Stack Overflow - How to get checkbox preferences value</string>
+    <string name="creditURL6">https://stackoverflow.com/questions/9794490/how-to-get-checkbox-preference-value</string>
+
+    <!-- Settings - Sections Titles -->
+    <string name="sectionTitle">Type of News</string>
+    <string name="pageSizeTitle">Articles</string>
+    <string name="thumbnailTitle">Thumbnail</string>
+
+    <!-- Settings - Sections Summary -->
+    <string name="sectionSummary">Choose a type of news</string>
+    <string name="pageSizeSummary">Display how many articles?</string>
+    <string name="thumbnailSummary">Display a thumbnail with the article?</string>
+
+    <!-- Settings - Keys -->
+    <string name="sectionKey">section</string>
+    <string name="pageSizeKey">pageSize</string>
+    <string name="thumbnailKey">thumbnail</string>
+
+    <!-- Settings - Sections - Display Values -->
+    <string name="film">Film</string>
+    <string name="games">Games</string>
+    <string name="money">Money</string>
+    <string name="music">Music</string>
+    <string name="science">Science</string>
+    <string name="sport">Sport</string>
+    <string name="technology">Technology</string>
+    <string name="weather">Weather</string>
+    <string name="world">World</string>
+
+    <!-- Settings - Sections - Coding Values -->
+    <string name="film_value">film</string>
+    <string name="games_value">games</string>
+    <string name="money_value">money</string>
+    <string name="music_value">music</string>
+    <string name="science_value">science</string>
+    <string name="sport_value">sport</string>
+    <string name="technology_value">technology</string>
+    <string name="weather_value">weather</string>
+    <string name="world_value">world</string>
+
+    <!-- Settings - Number of Articles - Display Values -->
+    <string name="oneArticle">1</string>
+    <string name="fiveArticles">5</string>
+    <string name="twelveArticles">12</string>
+
+    <!-- Settings - Number of Articles - Coding Values -->
+    <string name="oneArticle_value">1</string>
+    <string name="fiveArticles_value">5</string>
+    <string name="twelveArticles_value">12</string>
 
 </resources>

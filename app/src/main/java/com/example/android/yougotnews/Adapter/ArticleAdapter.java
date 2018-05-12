@@ -58,7 +58,7 @@ public class ArticleAdapter extends ArrayAdapter<Article> {
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        ViewHolder holder = null;
+        ViewHolder holder;
         //Checks if we already have or not a list view (convertView) to reuse
         //If we have none, create a new one
         if (convertView == null) {
@@ -107,10 +107,6 @@ public class ArticleAdapter extends ArrayAdapter<Article> {
         }
         //fetches the author info from the article Object stored
         String author = getContext().getString(R.string.byAuthorPrefix) + " " + article.getAuthor();
-        //in case there is nothing there, we get a generic text
-        if (author.length() == 0) {
-            author = "<i>The Guardian</i>";
-        }
         //fetches the date info from the article Object stored
         String date = article.getDate();
         //and formats it as we want, even taking consideration of the time zone of the user

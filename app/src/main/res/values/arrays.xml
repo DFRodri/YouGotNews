@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Names of the sections of news to display -->
+    <string-array name="newsSectionsDisplay">
+        <item>@string/film</item>
+        <item>@string/games</item>
+        <item>@string/money</item>
+        <item>@string/music</item>
+        <item>@string/science</item>
+        <item>@string/sport</item>
+        <item>@string/technology</item>
+        <item>@string/weather</item>
+        <item>@string/world</item>
+    </string-array>
+
+    <!-- Names of the section of news to use in code -->
+    <string-array name="newsSectionsCode">
+        <item>@string/film_value</item>
+        <item>@string/games_value</item>
+        <item>@string/money_value</item>
+        <item>@string/music_value</item>
+        <item>@string/science_value</item>
+        <item>@string/sport_value</item>
+        <item>@string/technology_value</item>
+        <item>@string/weather_value</item>
+        <item>@string/world_value</item>
+    </string-array>
+
+    <!-- Number of articles - display -->
+    <string-array name="pageSizeDisplay">
+        <item>@string/oneArticle</item>
+        <item>@string/fiveArticles</item>
+        <item>@string/twelveArticles</item>
+    </string-array>
+
+    <!-- Number of articles - Code -->
+    <string-array name="pageSizeCode">
+        <item>@string/oneArticle_value</item>
+        <item>@string/fiveArticles_value</item>
+        <item>@string/twelveArticles_value</item>
+    </string-array>
+
+</resources>

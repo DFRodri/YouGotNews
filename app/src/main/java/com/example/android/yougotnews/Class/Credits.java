@@ -3,7 +3,7 @@ package com.example.android.yougotnews.Class;
 /**
  * Custom Class to create the custom Object Credits that holds two elements
  * @Param creditName - name of the website
- * @Param creditURL - url of the website
+ * @Param  creditURL - url of the website
  **/
 public class Credits {
 

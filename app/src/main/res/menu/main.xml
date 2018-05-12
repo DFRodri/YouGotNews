@@ -7,7 +7,7 @@
         android:id="@+id/refresh"
         android:icon="@drawable/ic_refresh_white_24dp"
         android:title="@string/refresh"
-        app:showAsAction="ifRoom" />
+        app:showAsAction="always" />
 
     <!-- Credits Item -->
     <item
@@ -15,5 +15,12 @@
         android:icon="@drawable/ic_info_white_24dp"
         android:title="@string/credits"
         app:showAsAction="ifRoom" />
+
+    <!-- Settings Item -->
+    <item
+        android:id="@+id/settings"
+        android:icon="@drawable/ic_settings_white_24dp"
+        android:title="@string/settings"
+        app:showAsAction="always" />
 
 </menu>

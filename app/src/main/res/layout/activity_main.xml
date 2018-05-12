@@ -15,8 +15,6 @@
         android:id="@+id/emptyView"
         style="@style/BaseMatchStyle"
         android:layout_centerInParent="true"
-        android:drawableLeft="@drawable/ic_refresh_grey_24dp"
-        android:drawableStart="@drawable/ic_refresh_grey_24dp"
         android:gravity="center"
         android:padding="@dimen/defaultMarginPadding"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"

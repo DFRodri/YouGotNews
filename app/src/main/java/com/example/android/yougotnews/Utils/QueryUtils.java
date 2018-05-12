@@ -49,7 +49,7 @@ public class QueryUtils {
     }
 
     //method to create the url to make the internet request and return it to the caller
-    public static URL createUrl(String stringUrl) {
+    private static URL createUrl(String stringUrl) {
         URL url = null;
         //because exceptions (errors) are a thing,
         //we have to be sure that our URL actually is a workable URL or we get a warning logged
@@ -63,7 +63,7 @@ public class QueryUtils {
     }
 
     //method to make the https request to the server and return the info we need
-    public static String makeHttpsRequest(URL url) throws IOException {
+    private static String makeHttpsRequest(URL url) throws IOException {
         //local variable that will be used to store the data obtained from the server
         String jsonResponse = "";
 
@@ -136,7 +136,7 @@ public class QueryUtils {
 
     //method to convert the string obtained previously into the list of articles we want
     //(parse the JSON data collected from the internet)
-    public static List<Article> parseJSON(String articleJSON) {
+    private static List<Article> parseJSON(String articleJSON) {
         //if our JSON is empty, we can just stop here and return nothing to the caller
         if (TextUtils.isEmpty(articleJSON)) {
             return null;
@@ -156,14 +156,14 @@ public class QueryUtils {
             JSONArray articleArray = articleObject.getJSONArray("results");
             //check each position of the array for specific info
             /**
-             * @Params fields - object that has the:
-             *      @Params trailText - summary of the article
-             *      @Params byline - who wrote the article
-             *      @Params thumbnail - url of the header image used in the article
-             * @Params webTitle - tile of the article
-             * @Params sectionName - section of the article from where we want news
-             * @Params webPublicationDate - when the article was published
-             * @Params webUrl - the url of the article
+             * @Param fields - object that has the:
+             *      @Param trailText - summary of the article
+             *      @Param byline - who wrote the article
+             *      @Param thumbnail - url of the header image used in the article
+             * @Param webTitle - tile of the article
+             * @Param sectionName - section of the article from where we want news
+             * @Param webPublicationDate - when the article was published
+             * @Param webUrl - the url of the article
              **/
             for (int i = 0; i < articleArray.length(); i++) {
                 JSONObject currentArticle = articleArray.getJSONObject(i);
@@ -181,7 +181,7 @@ public class QueryUtils {
 
                 //if there is no author, there is nothing to add
                 if (author.length() == 0) {
-                    author = null;
+                    author = "The Guardian";
                 }
 
                 //creation of the article object with the data formatted

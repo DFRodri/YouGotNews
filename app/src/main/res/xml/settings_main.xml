@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/settings">
+
+    <PreferenceCategory android:title="@string/settings">
+
+        <!-- Select section of news to display -->
+        <ListPreference
+            android:defaultValue="@string/world_value"
+            android:entries="@array/newsSectionsDisplay"
+            android:entryValues="@array/newsSectionsCode"
+            android:key="@string/sectionKey"
+            android:summary="@string/sectionSummary"
+            android:title="@string/sectionTitle" />
+
+        <!-- Select number of articles to display -->
+        <ListPreference
+            android:defaultValue="@string/fiveArticles_value"
+            android:entries="@array/pageSizeDisplay"
+            android:entryValues="@array/pageSizeCode"
+            android:key="@string/pageSizeKey"
+            android:summary="@string/pageSizeSummary"
+            android:title="@string/pageSizeTitle" />
+
+        <!-- Select if those articles come with thumbnails -->
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="@string/thumbnailKey"
+            android:summary="@string/thumbnailSummary"
+            android:title="@string/thumbnailTitle" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
