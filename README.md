@@ -13,12 +13,7 @@
 <p>Navigation up in the action bar is also implemented.</p>
 <p>It takes into consideration the time zone of the user to prevent news to show in the future.</p>
 
-## Here are some screenshots
-
-##Stage 1
-<p><img src="https://raw.githubusercontent.com/DFRodri/YouGotNews/master/screenshot/device-2018-05-08-175117.png" height="25%" width="25%">
-<img src="https://raw.githubusercontent.com/DFRodri/YouGotNews/master/screenshot/device-2018-05-08-175404.png" width="25%" height="25%"></p>
-##Stage 2
+## Here are some screenshots from current version
 <p><img src="https://raw.githubusercontent.com/DFRodri/YouGotNews/master/screenshot/device-2018-05-12-220303.png" width="25%" height="25%">
 <img src="https://raw.githubusercontent.com/DFRodri/YouGotNews/master/screenshot/device-2018-05-12-220335.png" width="25%" height="25%">
 <img src="https://raw.githubusercontent.com/DFRodri/YouGotNews/master/screenshot/device-2018-05-12-220401.png" width="25%" height="25%"></p>
@@ -27,7 +22,7 @@
 
 
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=Cvaz6AyArCA" target="_blank"><img src="http://img.youtube.com/vi/Cvaz6AyArCA/0.jpg" alt="YOUGOTNEWS-Stage1" width="240" height="180" border="10"/></a>
-<p>Note: Video from Stage 1</p>
+<p>Note: Video from Stage 1, stage 2 implementations not in it</p>
 
    Copyright 2018 Diogo Rodrigues
 
