@@ -15,10 +15,10 @@
 
 ## Here are some screenshots
 
-#Stage 1
+##Stage 1
 <p><img src="https://raw.githubusercontent.com/DFRodri/YouGotNews/master/screenshot/device-2018-05-08-175117.png" height="25%" width="25%">
 <img src="https://raw.githubusercontent.com/DFRodri/YouGotNews/master/screenshot/device-2018-05-08-175404.png" width="25%" height="25%"></p>
-#Stage 2
+##Stage 2
 <p><img src="https://raw.githubusercontent.com/DFRodri/YouGotNews/master/screenshot/device-2018-05-12-220303.png" width="25%" height="25%">
 <img src="https://raw.githubusercontent.com/DFRodri/YouGotNews/master/screenshot/device-2018-05-12-220335.png" width="25%" height="25%">
 <img src="https://raw.githubusercontent.com/DFRodri/YouGotNews/master/screenshot/device-2018-05-12-220401.png" width="25%" height="25%"></p>
@@ -27,7 +27,7 @@
 
 
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=Cvaz6AyArCA" target="_blank"><img src="http://img.youtube.com/vi/Cvaz6AyArCA/0.jpg" alt="YOUGOTNEWS-Stage1" width="240" height="180" border="10"/></a>
-Note: Video from Stage 1
+<p>Note: Video from Stage 1</p>
 
    Copyright 2018 Diogo Rodrigues
 
