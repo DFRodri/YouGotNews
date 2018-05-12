@@ -19,8 +19,8 @@
 <p><img src="https://raw.githubusercontent.com/DFRodri/YouGotNews/master/screenshot/device-2018-05-08-175117.png" height="25%" width="25%">
 <img src="https://raw.githubusercontent.com/DFRodri/YouGotNews/master/screenshot/device-2018-05-08-175404.png" width="25%" height="25%"></p>
 #Stage 2
-<img src="https://raw.githubusercontent.com/DFRodri/YouGotNews/master/screenshot/device-2018-05-12-220303.png" width="25%" height="25%"></p>
-<img src="https://raw.githubusercontent.com/DFRodri/YouGotNews/master/screenshot/device-2018-05-12-220335.png" width="25%" height="25%"></p>
+<img src="https://raw.githubusercontent.com/DFRodri/YouGotNews/master/screenshot/device-2018-05-12-220303.png" width="25%" height="25%">
+<img src="https://raw.githubusercontent.com/DFRodri/YouGotNews/master/screenshot/device-2018-05-12-220335.png" width="25%" height="25%">
 <img src="https://raw.githubusercontent.com/DFRodri/YouGotNews/master/screenshot/device-2018-05-12-220401.png" width="25%" height="25%"></p>
 
 ## Here is a video showing it working (Recorded with Android Studio so no audio)
