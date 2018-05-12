@@ -3,7 +3,7 @@
 
 ### Short Description
 
-<p>They asked us, students, to design something that could look like a news app of a certain theme with the <i>The Guardian API</i> as a base.</p>
+<p>They asked us, students, to design something that could look like a news app with the <i>The Guardian API</i> as a base.</p>
 <p>Use of libraries was forbidden so creativity was also needed a bit to achieve some results.</p>
 
 ## How it works
