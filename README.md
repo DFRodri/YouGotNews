@@ -1,4 +1,4 @@
-# YouGotNews - Stage 1
+# YouGotNews - Stage 1+2
 <p>Project #6 of the Android Basics Nano-Degree</p>
 
 ### Short Description
@@ -8,15 +8,20 @@
 
 ## How it works
 
-<p>Simple APP that shows the last five results of news related to football.</p>
-<p>It makes use of the action bar to implement refresh and an intent to go the credits page.</p>
-<p>Navigation up in the action bar is also implemented in the credits page.</p>
+<p>Simple APP that shows the news of a certain theme/section.</p>
+<p>It makes use of the action bar to implement refresh,an intent to go the credits page, and even a fragment with settings.</p>
+<p>Navigation up in the action bar is also implemented.</p>
 <p>It takes into consideration the time zone of the user to prevent news to show in the future.</p>
 
 ## Here are some screenshots
 
+#Stage 1
 <p><img src="https://raw.githubusercontent.com/DFRodri/YouGotNews/master/screenshot/device-2018-05-08-175117.png" height="25%" width="25%">
 <img src="https://raw.githubusercontent.com/DFRodri/YouGotNews/master/screenshot/device-2018-05-08-175404.png" width="25%" height="25%"></p>
+#Stage 2
+<img src="https://raw.githubusercontent.com/DFRodri/YouGotNews/master/screenshot/device-2018-05-12-220303.png" width="25%" height="25%"></p>
+<img src="https://raw.githubusercontent.com/DFRodri/YouGotNews/master/screenshot/device-2018-05-12-220335.png" width="25%" height="25%"></p>
+<img src="https://raw.githubusercontent.com/DFRodri/YouGotNews/master/screenshot/device-2018-05-12-220401.png" width="25%" height="25%"></p>
 
 ## Here is a video showing it working (Recorded with Android Studio so no audio)
 
